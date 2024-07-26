@@ -1,11 +1,12 @@
 import { AppBar, Avatar, Button, Container, IconButton, styled, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import profileImage from '../assets/defaultlogin.png';
-import iconImage from '../assets/MOCO.ico';
+import profileImage from '../assets/logindefault.png';
+import iconImage from '../assets/POMA.ico';
 
 const StyledToolbar = styled(Toolbar)`
     background-color: black;
+    
     
 `;
 
@@ -19,25 +20,26 @@ const Navbar = () => {
     
   return (
     <div>
-        
-            
-        <AppBar position='absolute'>
+        <AppBar position='fixed'>
             <StyledToolbar >
                 
-                <Avatar sx={{ width: 50, height: 50 }} alt="MOCO" src={iconImage} />
-                <Typography style={{fontFamily:'initial'}}><h1>MOCO</h1></Typography>
-                &nbsp;  For the best movie collections
+                <Avatar sx={{ width: 50, height: 50 }} alt="POMA" src={iconImage} />
+                {/* <center style={{display:'flex',justifyContent:'flex-start'}}> */}
+                <Typography style={{ fontSize:'40px', fontFamily: 'fantasy', color:'white' }}>&nbsp;POMA</Typography>
+                {/* <Typography  variant='overline' style={{fontFamily:'initial'}}>For the best products</Typography> */}
+                &nbsp;&nbsp;
+                <Typography variant='overline' style={{fontFamily:'initial'}}>For&nbsp;</Typography>
+                <Typography variant='overline' style={{fontFamily:'initial'}}>the&nbsp;</Typography>
+                <Typography variant='overline' style={{fontFamily:'initial'}}>best&nbsp;</Typography>
+                <Typography variant='overline' style={{fontFamily:'initial'}}>Products</Typography>
+                {/* </center> */}
                 <Container sx={{ display: 'flex', justifyContent: 'flex-start', gap:'6rem' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button variant='text' style={{fontSize:'20px',fontFamily:'fantasy' ,color:'black'}}>
-                    <Link style={{textDecoration:'none',color:'greenyellow'}} to={'/viewmovies'}>HOME</Link>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button variant='text' style={{fontSize:'20px',fontFamily:'fantasy' ,color:'black'}}>
+                    <Link style={{textDecoration:'none',color:'orange'}} to={'/'}>HOME</Link>
                 </Button>
                 <Button variant='text' style={{fontSize:'20px',fontFamily:'fantasy' ,color:'black'}}>
                     
-                    <Link style={{textDecoration:'none',color:'greenyellow'}} to={'/viewmovies'}>View Movies</Link>
-                </Button>
-                <Button variant='text' style={{fontSize:'20px',fontFamily:'fantasy' ,color:'black'}}>
-                    
-                    <Link style={{textDecoration:'none',color:'greenyellow'}} to={'/addmovies'}>Add Movies</Link>
+                    <Link style={{textDecoration:'none',color:'orange'}} to={'/add'}>Add Product</Link>
                 </Button>
                 </Container>
                 <IconButton onClick={handleProfileClick}>
@@ -45,8 +47,6 @@ const Navbar = () => {
                 </IconButton>
             </StyledToolbar>
         </AppBar>
-       
-        
     </div>
   )
 }

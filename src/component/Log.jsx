@@ -13,10 +13,11 @@ const Log = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '97vh',
           backgroundColor: '#0f0f0f',
         }}
       >
+        
         <Box
           sx={{
             color:'black',
@@ -30,7 +31,7 @@ const Log = () => {
           }}
         >
           <img 
-            src="/MOCO.ico" 
+            src="/POMA.ico" 
             alt="Login Icon" 
             style={{ width: '100px', marginBottom: '1rem' }} 
           />
@@ -49,10 +50,10 @@ const Log = () => {
                 borderColor: 'white',
               },
               '&:hover .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'green',
+                borderColor: 'orange',
               },
               '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'green',
+                borderColor: 'orange',
               },
             },}}
           />
@@ -69,18 +70,18 @@ const Log = () => {
                 borderColor: 'white',
               },
               '&:hover .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'green',
+                borderColor: 'orange',
               },
               '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'green',
+                borderColor: 'orange',
               },
             },}}
           />
           <Button
           
             variant="contained"
-            sx={{ mt: 2, backgroundColor: 'green','&:hover': {
-          backgroundColor: 'green',
+            sx={{ mt: 2, backgroundColor: 'orange','&:hover': {
+          backgroundColor: 'orange',
         },}}
           >
           Log-in

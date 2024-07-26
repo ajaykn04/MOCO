@@ -1,9 +1,7 @@
-import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './component/Home';
-import Addm from './component/Addm';
-import Viewm from './component/Viewm';
 import Log from './component/Log';
+import Home from './component/Home';
+import Add from './component/Add';
 
 
 
@@ -16,9 +14,8 @@ function App() {
       <>
         <BrowserRouter>
           <Routes>
+            <Route path='/add' element={<Add/>}/>
             <Route path='/' element={<Home/>}/>
-            <Route path='/addmovies' element={<Addm/>}/>
-            <Route path='/viewmovies' element={<Viewm/>}/>
             <Route path='/login' element={<Log/>}/>
           </Routes>
         </BrowserRouter>
